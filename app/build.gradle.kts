@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.scaredeer.datastore"
     compileSdk {
-        version = release(37)
+        version = release(37) {
+            minorApiLevel = 1
+        }
     }
 
     defaultConfig {
@@ -14,7 +16,7 @@ android {
         minSdk = 24
         targetSdk = 37
         versionCode = 1
-        versionName = "20261115"
+        versionName = "20261120"
     }
 
     buildTypes {
@@ -47,5 +49,5 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     implementation("androidx.datastore:datastore-preferences:1.3.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.1")
 }
